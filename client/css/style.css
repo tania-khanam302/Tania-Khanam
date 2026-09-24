@@ -1,0 +1,1364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ========== common css start ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00acee;
+    --white: #fff;
+    --linear-color: linear-gradient(#00c4cc, #8b3dff);
+    --overley-color: #081b2936;
+    --facebook: #3B5998;
+    --linkedin: #0072b1;
+    --behance: #053eff;
+    --youtube: #bb0000;
+    --pinterest: #cb2027;
+    --dribbble: #ea4c89;
+    --twitter: #00acee;
+    --google: #dd4b39;
+}
+
+.dark-theme {
+    --bg-color: #e6e3e3;
+    --second-bg-color: #f0ebeb;
+    --text-color: #000000;
+    --main-color: #00acee;
+    --white: #fff;
+    --linear-color: linear-gradient(#00c4cc, #8b3dff);
+    --overley-color: #081b2936;
+}
+
+#darkmode {
+    font-size: 22px;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.bg-area {
+    width: 100%;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.social-icon .fa-github {
+    background-color: var(--second-bg-color);
+}
+
+.fa-linkedin-in {
+    background: var(--linkedin);
+    color: var(--white);
+}
+
+.fa-behance {
+    background: var(--behance);
+    color: var(--white);
+}
+
+.instagram-bg {
+    background: linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--white);
+}
+
+.fa-dribbble {
+    background: var(--dribbble);
+    color: var(--white);
+}
+
+
+/* ========== common icon end ========== */
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+    height: 50px;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    box-shadow: 2px 2px var(--second-bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+.btn-box .btn:nth-child(2) {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover {
+    color: var(--white);
+}
+
+.btn-box .btn:nth-child(2)::before {
+    background: var(--linear-color);
+}
+
+.section-heading {
+    position: relative;
+    font-size: 50px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.section-heading span {
+    color: var(--main-color);
+}
+
+
+/* ========== common css end ========== */
+
+
+/* ========== header start ========== */
+
+.header-area {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10000;
+    transition: .3s;
+}
+
+.header-area.sticky {
+    background: var(--bg-color);
+}
+
+.header-area .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0;
+}
+
+.header-area .logo a h1 {
+    display: flex;
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.header-area .logo a h1 p {
+    color: var(--main-color);
+}
+
+.navber {
+    position: relative;
+}
+
+.header-area .navber a {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 34px;
+    transition: .3s;
+}
+
+.header-area .navber a:hover,
+.header-area .navber a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* ========== header end ========== */
+
+
+/* ========== banner section start ========== */
+
+.banner-area {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* margin-top: 4%; */
+}
+
+.banner-area .index-content .btn-box {
+    margin: 20px 0;
+}
+
+
+.banner-area .index-content {
+    max-width: 530px;
+    z-index: 99;
+    text-align:start;
+}
+
+.banner-area .index-content .text-animated {
+    position: relative;
+    width: 310px;
+}
+
+.banner-area .index-content h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 40px;
+}
+
+.banner-area .index-content h1 span {
+    font-size: 48px;
+}
+
+.banner-area .index-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -310px;
+}
+
+.banner-area.show-animate .index-content h3 {
+    animation: indexBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.banner-area .index-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+}
+
+.banner-area.show-animate .index-content h3::before {
+    animation: indexCursorText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.banner-area .index-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 15px 0 20px;
+    text-align: justify;
+}
+
+.banner-area .social-icon {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.banner-area .social-icon i {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px var(--bg-color);
+    color: var(--text-color);
+    font-size: 18px;
+    text-align: center;
+    margin-right: 4px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.banner-area .social-icon i:hover {
+    box-shadow: 2px -1px 4px var(--main-color);
+}
+
+.banner-area .right-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-area .right-img img {
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+    object-fit: cover;
+}
+
+.banner-area .right-img::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 12%;
+    background-image: linear-gradient(#081b2900, #081b29);
+}
+
+
+/* banner animation start  */
+
+@keyframes indexBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -310px 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes indexCursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+
+/* banner animation end  */
+
+
+/* ========== banner section end ========== */
+
+
+/* ========== about section start ========== */
+
+.about-area {
+    background: var(--second-bg-color);
+}
+
+.about-area .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 70px;
+}
+
+.about-area .about .about-img {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-area .about .about-img img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    object-fit: cover;
+}
+
+.about-area .about .about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
+}
+
+.about-area .about .about-content {
+    text-align: center;
+    width: 77%;
+}
+
+
+/* .about-area .about .about-content {
+    text-align: start;
+    width: 50%;
+    margin-left: 15%;
+} */
+
+.about-area .about .about-content h3 {
+    position: relative;
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 35px;
+}
+
+.about-area .about .about-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.about-area .about .about-content .btn-box.btns {
+    position: relative;
+    display: inline-block;
+    width: 15rem;
+}
+
+
+/* about animation start  */
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+/* about animation end  */
+
+
+/* ========== about section end ========== */
+
+
+/* ========== education section start ========== */
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-row .education-colum {
+    flex: 1 1 40rem;
+}
+
+.education-colum .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education-colum .education-box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education-content .content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.education-content .content:hover::after {
+    width: 100%;
+}
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: 0.5rem;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+}
+
+.education-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+
+
+/* ========== education section end ========== */
+
+/* ========== Professional Skills Section Start ========== */
+
+.skills-bg {
+    background: var(--second-bg-color);
+}
+
+.skills {
+    min-height: auto;
+    padding: 5rem 0 7rem;
+}
+
+.skills h2 {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* ===== Subtitle ===== */
+
+.skills-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    max-width: 650px;
+    margin: -1rem auto 4rem;
+    line-height: 1.7;
+}
+
+/* ===== Skills Row ===== */
+
+.skills .skills-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* ===== Skills Card ===== */
+
+.skills-column {
+    min-width: 0;
+}
+
+.skills-card {
+    position: relative;
+    height: 100%;
+    padding: 2.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 1.5rem;
+    background: var(--bg-color);
+    overflow: hidden;
+    transition: .4s ease;
+    z-index: 1;
+}
+
+.skills-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.skills-card:hover::before {
+    width: 100%;
+}
+
+.skills-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0, 172, 238, .18);
+}
+
+/* ===== Card Header ===== */
+
+.skills-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.skills-icon {
+    min-width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: var(--linear-color);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.skills-card-header h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: .3rem;
+}
+
+.skills-card-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: .75;
+}
+
+/* ===== Individual Skill ===== */
+
+.skill-item {
+    margin-bottom: 1.8rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.skill-info span:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.skill-info span:last-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+/* ===== Skill Bar ===== */
+
+.skill-bar {
+    width: 100%;
+    height: .9rem;
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: .1rem solid var(--main-color);
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 1rem;
+    background: var(--linear-color);
+    transition: width 1s ease;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 991px) {
+
+    .skills .skills-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .skills .skills-row {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-card {
+        padding: 2rem;
+    }
+
+    .skills-card-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .skills-subtitle {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+
+}
+
+/* ========== Professional Skills Section End ========== */
+
+
+/* ========== work section strat ========== */
+
+.portfolio-area {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.portfolio-area .portfolio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0;
+}
+
+.portfolio-area .btn-box {
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.portfolio-area .portfolio-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px var(--second-bg-color);
+    width: 100%;
+    height: 240px;
+    background-color: #fff;
+}
+
+.portfolio-area .portfolio-box img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    object-fit: contain;
+}
+
+.portfolio-area .portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-area .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.portfolio-area .portfolio-box:hover .portfolio-layer {
+    height: 100%;
+    padding-top: 20%;
+    background: var(--linear-color);
+}
+
+.portfolio-area .portfolio-layer h4 {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.portfolio-area .portfolio-layer p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.portfolio-area .portfolio-layer a {
+    display: inline-block;
+    background: #fff;
+    color: var(--main-color);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+
+/* ========== work section end ========== */
+/* ========== Portfolio Pagination Start ========== */
+
+.portfolio-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.pagination-btn,
+.pagination-number {
+    border: .15rem solid var(--main-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: .6rem;
+    cursor: pointer;
+    transition: .3s ease;
+    font-size: 1.4rem;
+}
+
+.pagination-btn {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.pagination-number {
+    width: 4rem;
+    height: 4rem;
+}
+
+.pagination-btn:hover:not(:disabled),
+.pagination-number:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.pagination-number.active {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.pagination-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+
+    .portfolio-pagination {
+        gap: .5rem;
+    }
+
+    .pagination-btn {
+        padding: .8rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .pagination-number {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+/* ========== Portfolio Pagination End ========== */
+
+/* ========== contact section start ========== */
+
+section {
+    padding-top: 40px;
+}
+
+.contact-wrapper {
+    max-width: 80%;
+    margin: auto;
+}
+
+.contact-bg {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background-color: var(--second-bg-color);
+}
+
+.contact-bg h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-btn {
+    position: absolute;
+    left: 0;
+}
+
+.contact-bg form {
+    text-align: center;
+}
+
+.contact-bg form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-bg form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact-bg form .input-box .input-field input,
+.contact-bg form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact-bg form .input-box .input-field input::placeholder,
+.contact-bg form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact-bg form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact-bg form .input-box .input-field input:focus~.focus,
+.contact-bg form .input-box .input-field input:valid~.focus,
+.contact-bg form .textarea-field textarea:focus~.focus,
+.contact-bg form .textarea-field textarea:valid~.focus {
+    width: 100%;
+}
+
+.contact-bg form .textarea-field {
+    position: relative;
+    display: flex;
+    margin: .8rem 0 2.7rem;
+}
+
+.contact-bg form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+.contact-bg form .btn-box.btns {
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 530px;
+    box-shadow: 0 0 5px 3px var(--shadow);
+    border-radius: 4px;
+}
+
+
+/* ========== contact section end ========== */
+
+
+/* ========== footer design start ========== */
+
+.footer-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 4%;
+    background: var(--bg-color);
+}
+
+.footer-text,
+.footer-iconTop {
+    position: relative;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-area .social-icon {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-area .social-icon i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px var(--bg-color);
+    color: var(--text-color);
+    font-size: 18px;
+    text-align: center;
+    margin-right: 4px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.footer-area .social-icon i:hover {
+    box-shadow: 2px -1px 4px var(--main-color);
+}
+
+.iconTop a {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    /* background: var(--main-color); */
+    background: linear-gradient(#00c4cc, #8b3dff);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 4px -2px var(--text-color);
+    color: var(--text-color);
+    border-radius: .6rem;
+}
+
+.iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.iconTop a:hover::before {
+    width: 100%;
+}
+
+.iconTop a i {
+    align-items: center;
+    font-size: 16px;
+    padding: 13px;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+}
+
+
+/* ========== footer design end ========== */
+
+
+/* ========== animation reload and scroll start ========== */
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.animate.index-img {
+    width: 50%;
+}
+.header .logo .animate,
+.navber .animate,
+#menu-icon .animate,
+.banner-area.show-animate .animate,
+.portfolio-area.show-animate .animate,
+.address-area.show-animate .animate,
+.error-area.show-animate .animate {
+    animation-name: showRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+section:nth-child(odd) .animate.scroll,
+footer.animate.scroll {
+    background-color: var(--second-bg-color);
+}
+
+.education .education-box .animate.scroll {
+    width: 105%;
+}
+
+.about-area.show-animate .animate.scroll,
+.education-bg.show-animate .animate.scroll,
+.skills-bg.show-animate .animate.scroll,
+.portfolio-area.show-animate .animate.scroll,
+.contact-bg.show-animate .animate.scroll,
+.footer-bg .animate.scroll {
+    width: 0;
+    transition-delay: calc(.3s * var(--i));
+}
+
+.footer-text {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ========== animation reload and scroll end ========== */
+
+
+/* ========== error page start ========== */
+
+.error-area {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    margin: auto;
+}
+
+.error-container h1 {
+    font-size: 120px;
+    color: var(--main-color);
+}
+
+.error-container h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.error-container p a {
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.error-container p a:hover {
+    color: var(--behance);
+}
+
+.error-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.error-area .btn-box {
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* ========== error page end ========== */
+/* ========== Journey Section ========== */
+
+.journey-area {
+    background: var(--bg-color);
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.journey-area .section-heading {
+    color: var(--text-color);
+}
+
+.journey-area .journey-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.journey-row .journey-column {
+    flex: 1 1 40rem;
+}
+
+.journey-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+    color: var(--text-color);
+}
+
+.journey-column .journey-box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+
+.journey-box .journey-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.journey-box .journey-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.journey-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.journey-content .content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.journey-content .content:hover::after {
+    width: 100%;
+}
+
+.journey-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.journey-content .content .year i {
+    padding-right: .5rem;
+}
+
+.journey-content .content h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.journey-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+    color: var(--text-color);
+}
+
+
+/* ========== Journey Animation ========== */
+
+.journey-area.show-animate .animate.scroll {
+    width: 0;
+    transition-delay: calc(.3s * var(--i));
+}
+
+/* ========== Journey Section end ========== */
