@@ -235,6 +235,9 @@ function SkillsManagement() {
               <option value="Backend">
                 Backend Development
               </option>
+              <option value="Backend">
+               Database
+              </option>
 
               <option value="Tools">
                 Tools & Deployment

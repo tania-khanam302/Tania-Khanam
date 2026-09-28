@@ -178,27 +178,26 @@ const handleContactChange = (e) => {
               </h1>
 
               <div className="text-animated">
-                <h3>Front-end Developer</h3>
+                <h3>Web Designer & MERN Stack Developerr</h3>
                 <span className="animate" style={{ '--i': 3 }}></span>
               </div>
 
     <p>
-  I am a passionate Frontend Developer who enjoys creating
-  modern, responsive, and user-friendly websites and web
-  applications. I love turning ideas into clean and
-  interactive digital experiences using modern web
-  technologies.
+I build responsive websites and modern full-stack web applications using HTML, CSS, JavaScript, Bootstrap, React, Node.js, Express.js and MongoDB.
   <span className="animate" style={{ '--i': 4 }}></span>
 </p>
 
               <div className="btn-box">
 
                 <a href="#contact" className="btn">
-                  Hire Me
+                  View My Work
                 </a>
 
                 <a href="#contact" className="btn">
-                  Let's Talk
+                  Contact Me
+                </a>
+                <a href="#contact" className="btn">
+                  Download CV
                 </a>
 
                 <span className="animate" style={{ '--i': 5 }}></span>
@@ -283,44 +282,49 @@ const handleContactChange = (e) => {
         ></span>
       </div>
 
-      <div className="about-content">
+<div className="about-content">
 
-        <h3>
-          Frontend Developer
-          <span
-            className="animate scroll"
-            style={{ '--i': 3 }}
-          ></span>
-        </h3>
+  <h3>
+    Web Designer & MERN Stack Developer
+    <span
+      className="animate scroll"
+      style={{ '--i': 3 }}
+    ></span>
+  </h3>
 
-    <p>
-  I am Tania Khanam, a passionate Frontend Developer and
-  BSc Engineering student with a strong interest in building
-  modern, responsive, and user-friendly web applications.
-  I work with HTML, CSS, Bootstrap, JavaScript, React.js,
-  and Tailwind CSS. I also have experience with Node.js,
-  Express.js, MongoDB, and REST APIs. I enjoy learning new
-  technologies and creating practical solutions through web
-  development.
+  <p>
+    I am Tania Khanam, a Computer Science & Engineering graduate
+    with a strong passion for Web Design and Full-Stack Development.
+    I have experience in building modern, responsive, and
+    user-friendly websites using HTML, CSS, JavaScript, Bootstrap,
+    React.js, and Tailwind CSS.
 
-  <span
-    className="animate scroll"
-    style={{ '--i': 4 }}
-  ></span>
-</p>
+    <br /><br />
 
-        <div className="btn-box btns">
-          <a href="#contact" className="btn">
-            Read More
-          </a>
+    I have also developed full-stack web applications using the
+    MERN Stack, including MongoDB, Mongoose, Express.js, and Node.js.
+    I have worked on multiple web design projects and currently
+    have 3 MERN Stack projects deployed and live using Vercel,
+    Render, and MongoDB Atlas.
 
-          <span
-            className="animate scroll"
-            style={{ '--i': 5 }}
-          ></span>
-        </div>
+    <span
+      className="animate scroll"
+      style={{ '--i': 4 }}
+    ></span>
+  </p>
 
-      </div>
+  <div className="btn-box btns">
+    <a href="#contact" className="btn">
+      Read More
+    </a>
+
+    <span
+      className="animate scroll"
+      style={{ '--i': 5 }}
+    ></span>
+  </div>
+
+</div>
 
     </div>
   </div>
