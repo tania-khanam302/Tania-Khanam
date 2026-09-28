@@ -47,6 +47,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
   border: 1px solid #eee;
+  cursor: pointer;
 }
 
 .admin-card:hover {
