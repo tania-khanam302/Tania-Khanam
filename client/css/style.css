@@ -244,6 +244,7 @@ body {
 
 .banner-area .index-content .btn-box {
     margin: 20px 0;
+    font-size: 12px;
 }
 
 
@@ -255,7 +256,7 @@ body {
 
 .banner-area .index-content .text-animated {
     position: relative;
-    width: 550px;
+    width: 560px;
 }
 
 .banner-area .index-content h1 {
@@ -264,7 +265,7 @@ body {
     font-size: 28px;
     font-weight: 700;
     line-height: 60px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .banner-area .index-content h1 span {
