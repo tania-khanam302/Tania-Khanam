@@ -178,7 +178,7 @@ const handleContactChange = (e) => {
               </h1>
 
               <div className="text-animated">
-                <h3>Web Designer & MERN Stack Developerr</h3>
+                <h3>Web Designer & MERN Stack Developer</h3>
                 <span className="animate" style={{ '--i': 3 }}></span>
               </div>
 
