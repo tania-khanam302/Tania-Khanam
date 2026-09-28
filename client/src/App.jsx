@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home'
@@ -11,6 +12,8 @@ import MessagesManagement from './pages/admin/MessagesManagement'
 import SkillsManagement from './pages/admin/SkillsManagement'
 import JourneyManagement from './pages/admin/JourneyManagement'
 import AdminLayout from './pages/admin/AdminLayout'
+import AdminProfile from './pages/admin/AdminProfile'
+
 
 // Protected Route
 function ProtectedRoute({ children }) {
@@ -23,6 +26,7 @@ function ProtectedRoute({ children }) {
 
   return children
 }
+
 
 function App() {
   return (
@@ -100,6 +104,17 @@ function App() {
             <ProtectedRoute>
               <AdminLayout>
                 <JourneyManagement />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/profile"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <AdminProfile />
               </AdminLayout>
             </ProtectedRoute>
           }

@@ -1,3 +1,4 @@
+
 import { useNavigate, useLocation } from 'react-router-dom'
 import './admin.css'
 
@@ -26,6 +27,7 @@ function AdminLayout({ children }) {
 
         <nav className="admin-sidebar-nav">
 
+          {/* Dashboard */}
           <button
             className={location.pathname === '/admin' ? 'active' : ''}
             onClick={() => navigate('/admin')}
@@ -34,6 +36,7 @@ function AdminLayout({ children }) {
             <span>Dashboard</span>
           </button>
 
+          {/* Projects */}
           <button
             className={
               location.pathname === '/admin/projects'
@@ -46,6 +49,7 @@ function AdminLayout({ children }) {
             <span>Projects</span>
           </button>
 
+          {/* Skills */}
           <button
             className={
               location.pathname === '/admin/skills'
@@ -58,6 +62,7 @@ function AdminLayout({ children }) {
             <span>Skills</span>
           </button>
 
+          {/* Journey */}
           <button
             className={
               location.pathname === '/admin/journey'
@@ -70,6 +75,7 @@ function AdminLayout({ children }) {
             <span>Journey</span>
           </button>
 
+          {/* Messages */}
           <button
             className={
               location.pathname === '/admin/messages'
@@ -82,8 +88,22 @@ function AdminLayout({ children }) {
             <span>Messages</span>
           </button>
 
+          {/* Profile */}
+          <button
+            className={
+              location.pathname === '/admin/profile'
+                ? 'active'
+                : ''
+            }
+            onClick={() => navigate('/admin/profile')}
+          >
+            <i className="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </button>
+
         </nav>
 
+        {/* Logout */}
         <button
           className="admin-sidebar-logout"
           onClick={handleLogout}
