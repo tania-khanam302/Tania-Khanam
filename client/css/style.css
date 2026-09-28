@@ -493,6 +493,46 @@ body {
 
 /* about animation end  */
 
+/* About Statistics */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat-box {
+  padding: 18px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-box h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.stat-box span {
+  font-size: 14px;
+  display: block;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ========== about section end ========== */
 

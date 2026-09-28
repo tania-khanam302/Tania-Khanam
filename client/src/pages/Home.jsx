@@ -196,9 +196,9 @@ I build responsive websites and modern full-stack web applications using HTML, C
                 <a href="#contact" className="btn">
                   Contact Me
                 </a>
-                <a href="#contact" className="btn">
+                {/* <a href="#contact" className="btn">
                   Download CV
-                </a>
+                </a> */}
 
                 <span className="animate" style={{ '--i': 5 }}></span>
 
@@ -282,6 +282,7 @@ I build responsive websites and modern full-stack web applications using HTML, C
         ></span>
       </div>
 
+
 <div className="about-content">
 
   <h3>
@@ -313,6 +314,29 @@ I build responsive websites and modern full-stack web applications using HTML, C
     ></span>
   </p>
 
+
+  {/* About Statistics */}
+
+  <div className="about-stats">
+
+    <div className="stat-box">
+      <h4>Web Design</h4>
+      <span>Multiple Projects</span>
+    </div>
+
+    <div className="stat-box">
+      <h4>MERN Projects</h4>
+      <span>3+ Live Projects</span>
+    </div>
+
+    <div className="stat-box">
+      <h4>Technology</h4>
+      <span>Frontend + Backend</span>
+    </div>
+
+  </div>
+
+
   <div className="btn-box btns">
     <a href="#contact" className="btn">
       Read More
@@ -325,6 +349,8 @@ I build responsive websites and modern full-stack web applications using HTML, C
   </div>
 
 </div>
+
+
 
     </div>
   </div>
