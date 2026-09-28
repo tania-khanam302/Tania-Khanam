@@ -17,7 +17,7 @@ const [contactForm, setContactForm] = useState({
   message: '',
 })
 useEffect(() => {
-  fetch('http://localhost:5176/api/skills')
+  fetch(`${import.meta.env.VITE_API_URL}/api/skills`)
     .then((response) => response.json())
     .then((data) => {
       setSkills(data)
@@ -28,7 +28,7 @@ useEffect(() => {
 }, [])
 
 useEffect(() => {
-  fetch('http://localhost:5176/api/journeys')
+  fetch(`${import.meta.env.VITE_API_URL}/api/journeys`)
     .then((response) => response.json())
     .then((data) => {
       setJourneys(data)
@@ -45,7 +45,7 @@ const handleContactChange = (e) => {
   })
 }
   useEffect(() => {
-    fetch('http://localhost:5176/api/projects')
+   fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
       .then((response) => response.json())
       .then((data) => {
         setProjects(data)
@@ -629,7 +629,7 @@ const handleContactChange = (e) => {
 
     try {
       const response = await fetch(
-        'http://localhost:5176/api/messages',
+        `${import.meta.env.VITE_API_URL}/api/messages`,
         {
           method: 'POST',
           headers: {

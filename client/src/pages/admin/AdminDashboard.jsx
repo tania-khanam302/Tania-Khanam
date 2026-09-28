@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './admin.css'
@@ -21,10 +22,10 @@ function AdminDashboard() {
           messagesResponse,
           journeysResponse,
         ] = await Promise.all([
-          fetch('http://localhost:5176/api/projects'),
-          fetch('http://localhost:5176/api/skills'),
-          fetch('http://localhost:5176/api/messages'),
-          fetch('http://localhost:5176/api/journeys'),
+          fetch(`${import.meta.env.VITE_API_URL}/api/projects`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/skills`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/messages`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/journeys`),
         ])
 
         const projects = await projectsResponse.json()
@@ -49,11 +50,6 @@ function AdminDashboard() {
     fetchStats()
   }, [])
 
-  const handleLogout = () => {
-    localStorage.removeItem('adminLoggedIn')
-    navigate('/admin-login')
-  }
-
   return (
     <div className="admin-dashboard">
 
@@ -68,19 +64,10 @@ function AdminDashboard() {
           </p>
         </div>
 
-        <button
-          type="button"
-          className="logout-btn"
-          onClick={handleLogout}
-        >
-          <i className="fa-solid fa-right-from-bracket"></i>
-          Logout
-        </button>
-
       </div>
 
 
-      {/* Statistics Cards */}
+      {/* Statistics */}
       <div className="admin-statistics">
 
         <div className="stat-card">
@@ -130,10 +117,7 @@ function AdminDashboard() {
 
         <div
           className="admin-card"
-          onClick={() =>
-            navigate('/admin/projects')
-          }
-          style={{ cursor: 'pointer' }}
+          onClick={() => navigate('/admin/projects')}
         >
           <i className="fa-solid fa-briefcase"></i>
 
@@ -145,10 +129,7 @@ function AdminDashboard() {
 
         <div
           className="admin-card"
-          onClick={() =>
-            navigate('/admin/messages')
-          }
-          style={{ cursor: 'pointer' }}
+          onClick={() => navigate('/admin/messages')}
         >
           <i className="fa-solid fa-envelope"></i>
 
@@ -160,10 +141,7 @@ function AdminDashboard() {
 
         <div
           className="admin-card"
-          onClick={() =>
-            navigate('/admin/skills')
-          }
-          style={{ cursor: 'pointer' }}
+          onClick={() => navigate('/admin/skills')}
         >
           <i className="fa-solid fa-code"></i>
 
@@ -175,10 +153,7 @@ function AdminDashboard() {
 
         <div
           className="admin-card"
-          onClick={() =>
-            navigate('/admin/journey')
-          }
-          style={{ cursor: 'pointer' }}
+          onClick={() => navigate('/admin/journey')}
         >
           <i className="fa-solid fa-graduation-cap"></i>
 

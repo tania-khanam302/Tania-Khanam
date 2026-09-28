@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import './admin.css'
 
@@ -15,7 +16,7 @@ function SkillsManagement() {
   const fetchSkills = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5176/api/skills'
+        `${import.meta.env.VITE_API_URL}/api/skills`
       )
 
       const data = await response.json()
@@ -58,8 +59,8 @@ function SkillsManagement() {
 
     try {
       const url = editingId
-        ? `http://localhost:5176/api/skills/${editingId}`
-        : 'http://localhost:5176/api/skills'
+        ? `${import.meta.env.VITE_API_URL}/api/skills/${editingId}`
+        : `${import.meta.env.VITE_API_URL}/api/skills`
 
       const method = editingId ? 'PUT' : 'POST'
 
@@ -119,7 +120,7 @@ function SkillsManagement() {
 
     try {
       const response = await fetch(
-        `http://localhost:5176/api/skills/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/skills/${id}`,
         {
           method: 'DELETE',
         }

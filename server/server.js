@@ -6,7 +6,7 @@ import projectRoutes from './routes/projectRoutes.js'
 import messageRoutes from './routes/messageRoutes.js'
 import skillRoutes from './routes/skillRoutes.js'
 import journeyRoutes from './routes/journeyRoutes.js'
-
+import adminRoutes from './routes/adminRoutes.js'
 
 dotenv.config()
 
@@ -28,6 +28,7 @@ app.use('/api/projects', projectRoutes)
 app.use('/api/messages', messageRoutes)
 app.use('/api/skills', skillRoutes)
 app.use('/api/journeys', journeyRoutes)
+app.use('/api/admin', adminRoutes)
 
 app.get('/', (req, res) => {
   res.json({

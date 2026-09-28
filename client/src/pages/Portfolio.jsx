@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import '../../css/style.css'
 import '../../css/responsive.css'
@@ -8,7 +9,7 @@ function Portfolio() {
 
   // Fetch projects from MongoDB API
   useEffect(() => {
-    fetch('http://localhost:5176/api/projects')
+    fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
       .then((response) => response.json())
       .then((data) => {
         setProjects(data)

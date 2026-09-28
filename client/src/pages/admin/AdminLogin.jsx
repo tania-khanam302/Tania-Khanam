@@ -1,8 +1,7 @@
+
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './admin.css'
-
-
 
 function AdminLogin() {
   const navigate = useNavigate()
@@ -10,18 +9,43 @@ function AdminLogin() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Temporary admin login
-    if (
-      email === 'admin@gmail.com' &&
-      password === '123456'
-    ) {
-      localStorage.setItem('adminLoggedIn', 'true')
-      navigate('/admin')
-    } else {
-      alert('Invalid email or password')
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/admin/login`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      )
+
+      const data = await response.json()
+
+      if (response.ok) {
+        // Save login information
+        localStorage.setItem('adminLoggedIn', 'true')
+        localStorage.setItem('adminToken', data.token)
+        localStorage.setItem(
+          'admin',
+          JSON.stringify(data.admin)
+        )
+
+        // Go to admin dashboard
+        navigate('/admin')
+      } else {
+        alert(data.message || 'Invalid email or password')
+      }
+    } catch (error) {
+      console.error('Admin login error:', error)
+      alert('Unable to connect to server. Please try again.')
     }
   }
 

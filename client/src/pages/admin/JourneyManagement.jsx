@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import './admin.css'
 
@@ -17,7 +18,7 @@ function JourneyManagement() {
   const fetchJourneys = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5176/api/journeys'
+        `${import.meta.env.VITE_API_URL}/api/journeys`
       )
 
       const data = await response.json()
@@ -56,8 +57,8 @@ function JourneyManagement() {
 
     try {
       const url = editingId
-        ? `http://localhost:5176/api/journeys/${editingId}`
-        : 'http://localhost:5176/api/journeys'
+        ? `${import.meta.env.VITE_API_URL}/api/journeys/${editingId}`
+        : `${import.meta.env.VITE_API_URL}/api/journeys`
 
       const method = editingId ? 'PUT' : 'POST'
 
@@ -119,7 +120,7 @@ function JourneyManagement() {
 
     try {
       const response = await fetch(
-        `http://localhost:5176/api/journeys/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/journeys/${id}`,
         {
           method: 'DELETE',
         }

@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import './admin.css'
 
@@ -19,7 +20,7 @@ function ProjectManagement() {
   const fetchProjects = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5176/api/projects'
+        `${import.meta.env.VITE_API_URL}/api/projects`
       )
 
       const data = await response.json()
@@ -70,8 +71,8 @@ function ProjectManagement() {
 
     try {
       const url = editingId
-        ? `http://localhost:5176/api/projects/${editingId}`
-        : 'http://localhost:5176/api/projects'
+        ? `${import.meta.env.VITE_API_URL}/api/projects/${editingId}`
+        : `${import.meta.env.VITE_API_URL}/api/projects`
 
       const method = editingId ? 'PUT' : 'POST'
 
@@ -138,7 +139,7 @@ function ProjectManagement() {
 
     try {
       const response = await fetch(
-        `http://localhost:5176/api/projects/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/projects/${id}`,
         {
           method: 'DELETE',
         }
@@ -187,7 +188,6 @@ function ProjectManagement() {
         </button>
 
       </div>
-
 
       {/* Add / Edit Project Form */}
 
@@ -279,7 +279,6 @@ function ProjectManagement() {
 
         </form>
       )}
-
 
       {/* Project List */}
 

@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import './admin.css'
 
@@ -7,7 +8,7 @@ function MessagesManagement() {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5176/api/messages'
+        `${import.meta.env.VITE_API_URL}/api/messages`
       )
 
       const data = await response.json()
@@ -32,7 +33,7 @@ function MessagesManagement() {
 
     try {
       const response = await fetch(
-        `http://localhost:5176/api/messages/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/messages/${id}`,
         {
           method: 'DELETE',
         }
@@ -81,6 +82,7 @@ function MessagesManagement() {
               <div className="message-header">
                 <div>
                   <h3>{message.name}</h3>
+
                   <p>
                     <i className="fa-solid fa-envelope"></i>{' '}
                     {message.email}

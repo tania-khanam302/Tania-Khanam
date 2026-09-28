@@ -10,7 +10,7 @@ import ProjectManagement from './pages/admin/ProjectManagement'
 import MessagesManagement from './pages/admin/MessagesManagement'
 import SkillsManagement from './pages/admin/SkillsManagement'
 import JourneyManagement from './pages/admin/JourneyManagement'
-
+import AdminLayout from './pages/admin/AdminLayout'
 
 // Protected Route
 function ProtectedRoute({ children }) {
@@ -24,7 +24,6 @@ function ProtectedRoute({ children }) {
   return children
 }
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +31,11 @@ function App() {
       <Routes>
 
         {/* Public Routes */}
-        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
         <Route
           path="/portfolio"
@@ -51,7 +54,9 @@ function App() {
           path="/admin"
           element={
             <ProtectedRoute>
-              <AdminDashboard />
+              <AdminLayout>
+                <AdminDashboard />
+              </AdminLayout>
             </ProtectedRoute>
           }
         />
@@ -60,7 +65,9 @@ function App() {
           path="/admin/projects"
           element={
             <ProtectedRoute>
-              <ProjectManagement />
+              <AdminLayout>
+                <ProjectManagement />
+              </AdminLayout>
             </ProtectedRoute>
           }
         />
@@ -69,7 +76,9 @@ function App() {
           path="/admin/messages"
           element={
             <ProtectedRoute>
-              <MessagesManagement />
+              <AdminLayout>
+                <MessagesManagement />
+              </AdminLayout>
             </ProtectedRoute>
           }
         />
@@ -78,7 +87,9 @@ function App() {
           path="/admin/skills"
           element={
             <ProtectedRoute>
-              <SkillsManagement />
+              <AdminLayout>
+                <SkillsManagement />
+              </AdminLayout>
             </ProtectedRoute>
           }
         />
@@ -87,13 +98,16 @@ function App() {
           path="/admin/journey"
           element={
             <ProtectedRoute>
-              <JourneyManagement />
+              <AdminLayout>
+                <JourneyManagement />
+              </AdminLayout>
             </ProtectedRoute>
           }
         />
 
 
         {/* Error */}
+
         <Route
           path="*"
           element={<Error />}

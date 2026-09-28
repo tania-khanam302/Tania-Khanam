@@ -5,7 +5,7 @@
 .admin-dashboard,
 .project-management {
   min-height: 100vh;
-  padding: 100px 8% 50px;
+  /* padding: 100px 8% 50px; */
   background: #f5f7fb;
   color: #333;
 }
@@ -901,4 +901,503 @@
     align-items: flex-start;
     gap: 20px;
   }
+}
+
+
+/* ================================
+   ADMIN SIDEBAR LAYOUT
+================================ */
+
+.admin-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+}
+
+
+/* Sidebar */
+
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #081b29;
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+/* Logo */
+
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  margin-bottom: 45px;
+  color: #fff;
+}
+
+.admin-sidebar-logo i {
+  font-size: 2.5rem;
+  color: #00abf0;
+}
+
+.admin-sidebar-logo span {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+/* Navigation */
+
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-sidebar-nav button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 15px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #d8e1e8;
+  font-size: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-sidebar-nav button i {
+  width: 22px;
+  font-size: 1.7rem;
+}
+
+.admin-sidebar-nav button:hover,
+.admin-sidebar-nav button.active {
+  background: #00abf0;
+  color: #fff;
+}
+
+
+/* Logout */
+
+.admin-sidebar-logout {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-sidebar-logout:hover {
+  background: #c0392b;
+}
+
+
+/* Main Content */
+
+.admin-main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 60px 6%;
+}
+
+
+/* Dashboard Header */
+
+.admin-main .admin-dashboard-header {
+  margin-bottom: 30px;
+}
+
+.admin-main .admin-dashboard-header h1 {
+  font-size: 3rem;
+  color: #081b29;
+  margin-bottom: 10px;
+}
+
+.admin-main .admin-dashboard-header p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+  .admin-sidebar {
+    width: 210px;
+  }
+
+  .admin-main {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+    padding: 50px 4%;
+  }
+
+  .admin-sidebar-logo span {
+    font-size: 1.6rem;
+  }
+
+  .admin-sidebar-nav button,
+  .admin-sidebar-logout {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .admin-sidebar {
+    width: 70px;
+    padding: 25px 10px;
+  }
+
+  .admin-sidebar-logo {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin-sidebar-logo span,
+  .admin-sidebar-nav button span,
+  .admin-sidebar-logout span {
+    display: none;
+  }
+
+  .admin-sidebar-nav button,
+  .admin-sidebar-logout {
+    justify-content: center;
+    padding: 13px;
+  }
+
+  .admin-sidebar-nav button i,
+  .admin-sidebar-logout i {
+    margin: 0;
+  }
+
+  .admin-main {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    padding: 40px 5%;
+  }
+
+  .admin-main .admin-dashboard-header h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+/* ================================
+   Project Management Responsive
+================================ */
+
+@media (max-width: 900px) {
+
+  .project-management {
+    padding: 50px 4%;
+  }
+
+  .project-header {
+    gap: 15px;
+  }
+
+  .admin-project-card {
+    grid-template-columns: 180px 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .project-management {
+    padding: 35px 20px;
+  }
+
+  .project-management h1 {
+    font-size: 2.4rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-header .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-form {
+    padding: 20px;
+  }
+
+  .project-form h2 {
+    font-size: 2rem;
+  }
+
+  .project-form input,
+  .project-form textarea {
+    font-size: 1.4rem;
+  }
+
+  .project-form-buttons {
+    flex-direction: column;
+  }
+
+  .project-form-buttons .btn,
+  .project-form-buttons .cancel-btn {
+    width: 100%;
+  }
+
+  .admin-project-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .admin-project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .admin-project-card h3 {
+    font-size: 2rem;
+  }
+
+  .admin-project-card p {
+    font-size: 1.3rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions button {
+    width: 100%;
+  }
+
+}
+
+/* ================================
+   Skills Management Responsive
+================================ */
+
+@media (max-width: 600px) {
+
+  .skill-form {
+    padding: 20px;
+  }
+
+  .skill-form h2 {
+    font-size: 2rem;
+  }
+
+  .skill-input-group label {
+    font-size: 1.4rem;
+  }
+
+  .skill-input-group input,
+  .skill-input-group select {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .skills-admin-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-admin-card {
+    padding: 18px;
+  }
+
+  .skill-admin-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .skill-admin-info small {
+    font-size: 1.2rem;
+  }
+
+  .skill-admin-info span {
+    font-size: 1.6rem;
+  }
+
+  .skill-progress-bg {
+    height: 8px;
+  }
+
+  .skill-admin-card .project-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-admin-card .project-actions button {
+    width: 100%;
+  }
+
+}
+
+/* ================================
+   Journey Management Responsive
+================================ */
+
+@media (max-width: 600px) {
+
+  .project-management {
+    padding: 35px 20px;
+  }
+
+  .project-management h1 {
+    font-size: 2.4rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-header .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skill-form {
+    padding: 20px;
+  }
+
+  .skill-form h2 {
+    font-size: 2rem;
+  }
+
+  .skill-input-group label {
+    font-size: 1.4rem;
+  }
+
+  .skill-input-group input,
+  .skill-input-group select,
+  .skill-input-group textarea {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .skills-admin-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-admin-card {
+    padding: 18px;
+  }
+
+  .skill-admin-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .skill-admin-card p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .skill-admin-card .project-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-admin-card .project-actions button {
+    width: 100%;
+  }
+
+}
+
+
+/* ================================
+   Messages Management Responsive
+================================ */
+
+@media (max-width: 600px) {
+
+  .messages-list {
+    width: 100%;
+  }
+
+  .message-card {
+    padding: 18px;
+  }
+
+  .message-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .message-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .message-header p {
+    font-size: 1.3rem;
+    word-break: break-word;
+  }
+
+  .message-header .delete-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .message-content {
+    margin-top: 15px;
+  }
+
+  .message-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .message-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    word-break: break-word;
+  }
+
+  .message-card small {
+    display: block;
+    margin-top: 12px;
+    font-size: 1.1rem;
+  }
+
+  .no-messages {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
 }
