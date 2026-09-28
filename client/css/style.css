@@ -248,14 +248,14 @@ body {
 
 
 .banner-area .index-content {
-    max-width: 530px;
+    max-width: 730px;
     z-index: 99;
     text-align:start;
 }
 
 .banner-area .index-content .text-animated {
     position: relative;
-    width: 310px;
+    width: 100%;
 }
 
 .banner-area .index-content h1 {
